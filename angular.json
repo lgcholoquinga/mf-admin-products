@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "prd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -95,8 +95,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8ea63cad-ae8f-4e07-b1c1-6bc5205553d7",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
